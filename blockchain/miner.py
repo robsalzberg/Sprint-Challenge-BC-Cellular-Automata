@@ -44,8 +44,10 @@ def valid_proof(last_hash, proof):
     IE:  last_hash: ...999123456, new hash 123456888...
     """
 
-    # TODO: Your code here!
-    pass
+    # Your code here!
+    first_six = hashlib.sha256(str(proof).encode()).hexdigest()[:6]
+
+    return first_six == last_hash
 
 
 if __name__ == '__main__':
